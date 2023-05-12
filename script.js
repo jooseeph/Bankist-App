@@ -189,9 +189,11 @@ btnClose.addEventListener('click', function (e) {
   inputClosePin.value = inputCloseUsername.value = '';
 });
 
+let sorted = false;//false
 btnSort.addEventListener('click', function (e) {
   e.preventDefault();
-  displayMovements(currentAccount.movements, true)
+  displayMovements(currentAccount.movements, !sorted);//true
+  sorted = !sorted 
 });
 
 /////////////////////////////////////////////////
